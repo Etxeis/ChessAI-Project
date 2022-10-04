@@ -5,6 +5,10 @@
 - Couldn't introduce struct over header files, need to fix that too (OK)
 - * typedef's declaration and implementation should go on .h file *
 
+## Octerber 4th:
+- Correct PrintBoard for displaying like a "real" chessboard distribution (OK)
+- Create a Makefile (OK)
+
 ## Task Collector:
-- Correct PrintBoard for displaying like a "real" chessboard distribution (-)
-- Create a Makefile (-)
+- Create first piece and functionalities (-)
+- Infinite loop functionality (-)

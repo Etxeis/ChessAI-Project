@@ -11,6 +11,13 @@ void StartBoard(char* new_chess_board_dist) {
 
 // Prints Table
 void PrintBoard(ChessBoard board) {
-    printf("Printing Board: \n%s\n", board.dist);
+    printf("Printing Board: \n");
+    for (int i=0; i<64; i++) {
+        if (i % 8 == 0) {
+            printf("\n");
+        }
+        printf("%c", board.dist[i]);
+    }
+    printf("\n\n");
 
 }
