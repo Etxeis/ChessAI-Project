@@ -11,7 +11,6 @@ int main() {
     StartBoard(chess_board.dist);
     PrintBoard(chess_board);
 
-
     return 0;
 }
 
