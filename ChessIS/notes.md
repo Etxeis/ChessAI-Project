@@ -9,6 +9,10 @@
 - Correct PrintBoard for displaying like a "real" chessboard distribution (OK)
 - Create a Makefile (OK)
 
+## October 5th
+- Create first piece (Ok)
+
 ## Task Collector:
-- Create first piece and functionalities (-)
 - Infinite loop functionality (-)
+- Implement first move for pawn (-)
+- Fix function arguments, Why are they not changing? (-)
