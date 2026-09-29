@@ -1,0 +1,7 @@
+# Ignorar todos los archivos ejecutables compilados de C/C++
+*.exe
+
+# Opcional: Ignorar también los archivos de objeto intermedios de compilación
+*.o
+*.obj
+
