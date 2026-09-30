@@ -3,18 +3,18 @@
 
 int rows = 8;
 int columns = 8;
-char* white_pawn   = "\xe2\x99\x99"; // ♙
-char* white_rook   = "\xe2\x99\x96"; // ♖
-char* white_knight = "\xe2\x99\x98"; // ♘
-char* white_bishop = "\xe2\x99\x97"; // ♗
-char* white_queen  = "\xe2\x99\x95"; // ♕
-char* white_king   = "\xe2\x99\x94"; // ♔
-char* black_pawn   = "\xe2\x99\x9f"; // ♟
-char* black_rook   = "\xe2\x99\x9c"; // ♜
-char* black_knight = "\xe2\x99\x9e"; // ♞
-char* black_bishop = "\xe2\x99\x9d"; // ♝
-char* black_queen  = "\xe2\x99\x9b"; // ♛
-char* black_king   = "\xe2\x99\x9a"; // ♚
+char* white_pawn   = "p"; //"\xe2\x99\x99"; // ♙
+char* white_rook   = "r"; //"\xe2\x99\x96"; // ♖
+char* white_knight = "n"; //"\xe2\x99\x98"; // ♘
+char* white_bishop = "b"; //"\xe2\x99\x97"; // ♗
+char* white_queen  = "q"; //"\xe2\x99\x95"; // ♕
+char* white_king   = "k"; //"\xe2\x99\x94"; // ♔
+char* black_pawn   = "p"; //"\xe2\x99\x9f"; // ♟
+char* black_rook   = "r"; //"\xe2\x99\x9c"; // ♜
+char* black_knight = "n"; //"\xe2\x99\x9e"; // ♞
+char* black_bishop = "b"; //"\xe2\x99\x9d"; // ♝
+char* black_queen  = "q"; //"\xe2\x99\x9b"; // ♛
+char* black_king   = "k"; //"\xe2\x99\x9a"; // ♚
 char* nothing = "0";
 int white = 0;
 int black = 1;
@@ -109,7 +109,7 @@ char*** create_board() {
 void print_board(char*** board) {
     for (int i=7; i >= 0; i--) {
         for (int j=0; j < columns; j++) {
-            printf("%c", board[i][j]);
+            printf("%s", board[i][j]);
         }
         printf("\n");
     }
