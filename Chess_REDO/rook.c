@@ -37,7 +37,7 @@ char*** rook_movement(char*** board, int row, int column, int row_movement, int 
                 }
             }
         }
-    } else if (side == 0) {
+    } else if (side == 1) {
         for (int i=0; i<rows; i++) {
             for (int j=0; j<columns; j++) {
                 if (column_movement < column) {
