@@ -1,11 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
 
 #include "chessboard.h"
 
 char*** rook_movement(char*** board, int row, int column, int row_movement, int column_movement, int side) {
-    bool not_nothing = true;
+    int not_nothing = 0;
     if (side == 0) {
         for (int i=0; i<rows; i++) {
             for (int j=0; j<columns; j++) {
@@ -15,7 +14,7 @@ char*** rook_movement(char*** board, int row, int column, int row_movement, int 
                             not_nothing = false;
                         }
                     }
-                    if (not_nothing == true) {
+                    if (not_nothing == 0) {
                         board[row][column] = nothing;
                         board[row_movement][column_movement] = white_rook;
                         return board;
@@ -28,7 +27,7 @@ char*** rook_movement(char*** board, int row, int column, int row_movement, int 
                             not_nothing = false;
                         }
                     }
-                    if (not_nothing == true) {
+                    if (not_nothing == 0) {
                         board[row][column] = nothing;
                         board[row_movement][column_movement] = white_rook;
                         return board;
@@ -48,7 +47,7 @@ char*** rook_movement(char*** board, int row, int column, int row_movement, int 
                             not_nothing = false;
                         }
                     }
-                    if (not_nothing == true) {
+                    if (not_nothing == 0) {
                         board[row][column] = nothing;
                         board[row_movement][column_movement] = white_rook;
                         return board;
@@ -61,7 +60,7 @@ char*** rook_movement(char*** board, int row, int column, int row_movement, int 
                             not_nothing = false;
                         }
                     }
-                    if (not_nothing == true) {
+                    if (not_nothing == 0) {
                         board[row][column] = nothing;
                         board[row_movement][column_movement] = white_rook;
                         return board;
@@ -73,4 +72,5 @@ char*** rook_movement(char*** board, int row, int column, int row_movement, int 
         }
         return board;
     }
+    return board;
 }
