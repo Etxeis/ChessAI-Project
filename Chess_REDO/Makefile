@@ -8,7 +8,7 @@ CFLAGS = -Wall -Wextra -g
 TARGET = ajedrez
 
 # Todos los archivos .c de tu proyecto
-SRCS = main.c chessboard.c pawn.c rook.c
+SRCS = main.c chessboard.c pawn.c rook.c knight.c
 
 # Convierte la lista de archivos .c en archivos de objeto .o (temporal)
 OBJS = $(SRCS:.c=.o)

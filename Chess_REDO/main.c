@@ -3,6 +3,7 @@
 #include "chessboard.h"
 #include "pawn.h"
 #include "rook.h"
+#include "knight.h"
 
 int main() {
     char*** board = create_board();
@@ -26,10 +27,13 @@ int main() {
     board = rook_movement(board, 5, 0, 5, 7, 1);
     print_board(board);
     printf("\n");
-    board = rook_eating(board, 2, 7, 5, 7, 1);
+    board = rook_eating(board, 2, 7, 5, 7, 0);
     print_board(board);
     printf("\n");
     board = pawn_eating(board, 6, 6, 5, 7, 1);
+    print_board(board);
+    printf("\n");
+    board = knight_move(board, 0, 1, 2, 2, 0);
     print_board(board);
     printf("\n");
 
