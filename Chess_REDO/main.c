@@ -23,7 +23,13 @@ int main() {
     board = rook_movement(board, 2, 0, 2, 7, 0);
     print_board(board);
     printf("\n");
-    board = rook_movement(board, 5, 0, 5, 6, 1);
+    board = rook_movement(board, 5, 0, 5, 7, 1);
+    print_board(board);
+    printf("\n");
+    board = rook_eating(board, 2, 7, 5, 7, 1);
+    print_board(board);
+    printf("\n");
+    board = pawn_eating_move(board, 6, 6, 5, 7, 1);
     print_board(board);
     printf("\n");
 
