@@ -2,6 +2,7 @@
 
 #include "chessboard.h"
 #include "pawn.h"
+#include "rook.h"
 
 int main() {
     char*** board = create_board();
