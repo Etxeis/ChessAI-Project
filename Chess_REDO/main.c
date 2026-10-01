@@ -29,7 +29,7 @@ int main() {
     board = rook_eating(board, 2, 7, 5, 7, 1);
     print_board(board);
     printf("\n");
-    board = pawn_eating_move(board, 6, 6, 5, 7, 1);
+    board = pawn_eating(board, 6, 6, 5, 7, 1);
     print_board(board);
     printf("\n");
 

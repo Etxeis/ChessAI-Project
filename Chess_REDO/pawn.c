@@ -70,7 +70,7 @@ char*** pawn_normal_move(char*** board, int row, int column, int side) {
 
 }
 
-char*** pawn_eating_move(char*** board, int row, int column, int eating_row, int eating_colum, int side) {
+char*** pawn_eating(char*** board, int row, int column, int eating_row, int eating_colum, int side) {
     for (int i=0; i < rows; i++) {
         for (int j=0; j < columns; j++) {
             if (side == 0) {
