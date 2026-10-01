@@ -1,7 +1,9 @@
-# Ignorar todos los archivos ejecutables compilados de C/C++
 *.exe
+ajedrez
 
-# Opcional: Ignorar también los archivos de objeto intermedios de compilación
+# Archivos de objeto e intermedios de compilación (Windows y Linux)
 *.o
 *.obj
 
+# Archivos de depuración de código
+*.dSYM/
