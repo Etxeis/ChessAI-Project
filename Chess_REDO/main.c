@@ -14,7 +14,16 @@ int main() {
     board = pawn_first_move(board, 6, 0, 2, 1);
     print_board(board);
     printf("\n");
-    board = rook_movement(board, 0, 0, 2, 0, 1);
+    board = rook_movement(board, 0, 0, 2, 0, 0);
+    print_board(board);
+    printf("\n");
+    board = rook_movement(board, 7, 0, 5, 0, 1);
+    print_board(board);
+    printf("\n");
+    board = rook_movement(board, 2, 0, 2, 7, 0);
+    print_board(board);
+    printf("\n");
+    board = rook_movement(board, 5, 0, 5, 6, 1);
     print_board(board);
     printf("\n");
 

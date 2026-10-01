@@ -8,8 +8,9 @@ char*** rook_movement(char*** board, int row, int column, int row_movement, int 
     if (side == 0) {
         for (int i=0; i<rows; i++) {
             for (int j=0; j<columns; j++) {
-                if (row_movement < row) {
-                    for (int k = row; row-1 >= row_movement; k--) {
+                // If white rook moves upwards in rows
+                if (row < row_movement) {
+                    for (int k = row+1; k <= row_movement; k++) {
                         if (board[k][column] != nothing) {
                             not_nothing = 1;
                             return board;
@@ -20,8 +21,8 @@ char*** rook_movement(char*** board, int row, int column, int row_movement, int 
                         board[row_movement][column_movement] = white_rook;
                         return board;
                     }
-                } else {
-                    for (int k = row; row+1 <= row_movement; k++) {
+                } else { // If white rook moves backwards in rows
+                    for (int k = row-1; k >= row_movement; k--) {
                         if (board[k][column] != nothing) {
                             not_nothing = 1;
                             return board;
@@ -33,8 +34,9 @@ char*** rook_movement(char*** board, int row, int column, int row_movement, int 
                         return board;
                     }
                 }
+                // If white rook moves left in columns
                 if (column_movement < column) {
-                    for (int k = column; column-1 >= column_movement; k--) {
+                    for (int k = column-1; k >= column_movement; k--) {
                         if (board[row][k] != nothing) {
                             not_nothing = 1;
                             return board;
@@ -45,8 +47,8 @@ char*** rook_movement(char*** board, int row, int column, int row_movement, int 
                         board[row_movement][column_movement] = white_rook;
                         return board;
                     }
-                } else {
-                    for (int k = column; column+1 <= column_movement; k++) {
+                } else { // If white rook moves right in columns
+                    for (int k = column+1; k <= column_movement; k++) {
                         if (board[row][k] != nothing) {
                             not_nothing = 1;
                             return board;
@@ -67,36 +69,61 @@ char*** rook_movement(char*** board, int row, int column, int row_movement, int 
     } else {
         for (int i=0; i<rows; i++) {
             for (int j=0; j<columns; j++) {
+                // If black rook moves upwards in rows
+                if (row < row_movement) {
+                    for (int k = row+1; k <= row_movement; k++) {
+                        if (board[k][column] != nothing) {
+                            not_nothing = 1;
+                            return board;
+                        }
+                    }
+                    if (not_nothing == 0) {
+                        board[row][column] = nothing;
+                        board[row_movement][column_movement] = black_rook;
+                        return board;
+                    }
+                } else { // If black rook moves backwards in rows
+                    for (int k = row-1; k >= row_movement; k--) {
+                        if (board[k][column] != nothing) {
+                            not_nothing = 1;
+                            return board;
+                        }
+                    }
+                    if (not_nothing == 0) {
+                        board[row][column] = nothing;
+                        board[row_movement][column_movement] = black_rook;
+                        return board;
+                    }
+                }
+                // If black rook moves left in columns
                 if (column_movement < column) {
-                    for (int k = column; column_movement <= column-1; k--) {
+                    for (int k = column-1; k >= column_movement; k--) {
                         if (board[row][k] != nothing) {
                             not_nothing = 1;
+                            return board;
                         }
                     }
                     if (not_nothing == 0) {
                         board[row][column] = nothing;
-                        board[row_movement][column_movement] = white_rook;
-                        return board;
-                    } else {
+                        board[row_movement][column_movement] = black_rook;
                         return board;
                     }
-                } else {
-                    for (int k = column; column_movement >= column+1; k++) {
+                } else { // If black rook moves right in columns
+                    for (int k = column+1; k <= column_movement; k++) {
                         if (board[row][k] != nothing) {
                             not_nothing = 1;
+                            return board;
                         }
                     }
                     if (not_nothing == 0) {
                         board[row][column] = nothing;
-                        board[row_movement][column_movement] = white_rook;
-                        return board;
-                    } else {
+                        board[row_movement][column_movement] = black_rook;
                         return board;
                     }
                 }
             }
+            return board;
         }
-        return board;
     }
     return board;
 }
