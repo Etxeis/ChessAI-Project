@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 #include "chessboard.h"
 
@@ -9,9 +10,9 @@ char*** rook_movement(char*** board, int row, int column, int row_movement, int 
         for (int i=0; i<rows; i++) {
             for (int j=0; j<columns; j++) {
                 if (row_movement < row) {
-                    for (k = row; row_movement <= row-1; k--) {
+                    for (int k = row; row_movement <= row-1; k--) {
                         if (board[k][column] != nothing) {
-                            bool = false;
+                            not_nothing = false;
                         }
                     }
                     if (not_nothing == true) {
@@ -22,9 +23,9 @@ char*** rook_movement(char*** board, int row, int column, int row_movement, int 
                         return board;
                     }
                 } else {
-                    for (k = row; row_movement >= row+1; k++) {
+                    for (int k = row; row_movement >= row+1; k++) {
                         if (board[k][column] != nothing) {
-                            bool = false;
+                            not_nothing = false;
                         }
                     }
                     if (not_nothing == true) {
@@ -36,14 +37,15 @@ char*** rook_movement(char*** board, int row, int column, int row_movement, int 
                     }
                 }
             }
+            return board;
         }
     } else if (side == 1) {
         for (int i=0; i<rows; i++) {
             for (int j=0; j<columns; j++) {
                 if (column_movement < column) {
-                    for (k = column; column_movement <= column-1; k--) {
+                    for (int k = column; column_movement <= column-1; k--) {
                         if (board[row][k] != nothing) {
-                            bool = false;
+                            not_nothing = false;
                         }
                     }
                     if (not_nothing == true) {
@@ -54,9 +56,9 @@ char*** rook_movement(char*** board, int row, int column, int row_movement, int 
                         return board;
                     }
                 } else {
-                    for (k = column; column_movement >= column+1; k++) {
+                    for (int k = column; column_movement >= column+1; k++) {
                         if (board[row][k] != nothing) {
-                            bool = false;
+                            not_nothing = false;
                         }
                     }
                     if (not_nothing == true) {
@@ -69,5 +71,6 @@ char*** rook_movement(char*** board, int row, int column, int row_movement, int 
                 }
             }
         }
+        return board;
     }
 }
