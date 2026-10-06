@@ -4,6 +4,7 @@
 #include "pawn.h"
 #include "rook.h"
 #include "knight.h"
+#include "bishop.h"
 
 int main() {
     char*** board = create_board();
@@ -34,6 +35,9 @@ int main() {
     print_board(board);
     printf("\n");
     board = knight_move(board, 0, 1, 2, 2, 0);
+    print_board(board);
+    printf("\n");
+    board = knight_move(board, 7, 6, 5, 5, 1);
     print_board(board);
     printf("\n");
 
