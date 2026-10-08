@@ -13,10 +13,13 @@ int main() {
     board = pawn_first_move(board, 1, 3, 2, 0);
     print_board(board);
     printf("\n");
-    board = pawn_first_move(board, 6, 6, 2, 1);
+    board = pawn_first_move(board, 6, 4, 2, 1);
     print_board(board);
     printf("\n");
     board = bishop_move(board, 0, 2, 4, 6, 0);
+    print_board(board);
+    printf("\n");
+    board = bishop_move(board, 7, 5, 6, 4, 1);
     print_board(board);
     printf("\n");
 
