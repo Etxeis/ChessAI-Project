@@ -10,8 +10,11 @@ char*** bishop_move(char*** board, int row, int column, int row_move, int column
         return board;
     }
 
-    int row_movement = sgn(row, row_movement);
-    int column_movement = sgn(column, column_movement);
+    int row_movement = 0;
+    int column_movement = 0;
+
+    row_movement = sgn(row, row_movement);
+    column_movement = sgn(column, column_movement);
 
     int current_row = row+row_movement;
     int current_column = column+column_movement; 
